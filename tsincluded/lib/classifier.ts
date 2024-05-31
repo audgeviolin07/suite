@@ -9,7 +9,7 @@ export const classifyImage = async (file: File) => {
     .then((buffer) => Buffer.from(buffer).toString("base64"));
 
   const completion = await openAi.chat.completions.create({
-    model: "gpt-4-vision-preview",
+    model: "gpt-4o-2024-05-13",
     messages: [
       {
         role: "user",

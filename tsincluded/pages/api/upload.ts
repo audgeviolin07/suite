@@ -40,7 +40,7 @@ const describeImage = async (imagePath: string): Promise<string> => {
   const imageBytes = fs.readFileSync(imagePath).toString('base64');
   const prompt = `Describe the following image in detail:\n\n${imageBytes}`;
   const response = await openai.createCompletion({
-    model: 'gpt-4',
+    model: 'gpt-4o-2024-05-13',
     prompt: prompt,
     max_tokens: 100,
   });
